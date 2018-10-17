@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="approved_supplierinfo_form_view">
+                    <field name="name">approved.supplierinfo.form</field>
+                    <field name="model">product.supplierinfo</field>
+                    <field name="inherit_id" ref="product.product_supplierinfo_form_view" />
+                    <field name="arch" type="xml">
+                        <field name="company_id" position="after">
+                            <field name="approved" />
+                            <field name="manufacturer_ids" />
+                        </field>
+                    </field>
+                </record>
+
+        <record model="ir.ui.view" id="manufacturer_line_tree_view">
+            <field name="name">manufacturer.line.tree</field>
+            <field name="model">manufacturer.line</field>
+            <field name="arch" type="xml">
+                <tree string="Manufacturer Line">
+                    <field name="name" />
+                    <field name="approved" />
+                    <field name="approval_start_date" required="True"/>
+                    <field name="approval_end_date" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="manufacturer_line_form_view">
+            <field name="name">manufacturer.line.form</field>
+            <field name="model">manufacturer.line</field>
+            <field name="arch" type="xml">
+                <form string="Manufacturer Line">
+                    <group>
+                        <field name="name" />
+                        <field name="approved" />
+                        <field name="approval_start_date" />
+                        <field name="approval_end_date" />
+                        <field name="active" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        </data>
+</openerp>

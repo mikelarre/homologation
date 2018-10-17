@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+approved_manufacturer_user,access_manufacturer_line_user,model_manufacturer_line,purchase.group_purchase_user,1,0,0,0
+approved_manufacturer_manager,access_manufacturer_line_manager,model_manufacturer_line,purchase.group_purchase_manager,1,1,1,1
