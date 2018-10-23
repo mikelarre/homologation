@@ -26,6 +26,7 @@ class ManufacturerLine(models.Model):
     _name = "manufacturer.line"
 
     name = fields.Char(string="Manufacturer")
+    partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
     approved = fields.Boolean(string="Approved",
                               compute="_compute_approved_manufacturer")
     approval_start_date = fields.Date(string="Approval start date")

@@ -8,6 +8,7 @@
     "depends": [
         "purchase_order_allowed_product",
         "stock",
+        "product_manufacturer"
     ],
     "author": "OdooMRP team, "
               "AvanzOSC, "

@@ -71,7 +71,7 @@ class TestPurchaseContractSpecification(common.SavepointCase):
         self.wiz_inst = self.wiz.create({
             'picking_id': self.picking.id
         })
-        # self.wiz_inst.with_context(
-        #     active_model='stock.picking', active_ids=self.picking.id
-        # ).default_get()
-        # pass
+        self.with_context(
+            active_model='stock.picking', active_ids=self.picking.id
+        ).wiz_inst.default_get()
+        pass
