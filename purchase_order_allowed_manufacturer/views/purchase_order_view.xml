@@ -10,17 +10,17 @@
                             <field name="order_manufacturer_ids"
                                    widget="many2many_tags"
                                    domain="[('id', 'in', manufacturer_ids[0][2])]" options="{'no_create_edit':True}"
-                                   string="Available Manufacturers"/>
+                                   string="Selected Manufacturers"/>
                             <field name="manufacturer_ids"
                                    widget="many2many_tags"
-                                   string="Selected Manufacturers"/>
+                                   string="Available Manufacturers"/>
                         </field>
                     </field>
                 </record>
 
 
                 <record model="ir.ui.view" id="manufacturer_purchase_line_form">
-                            <field name="name">manufacturer.purchsae.line
+                            <field name="name">manufacturer.purchase.line
                                 .form</field>
                             <field name="model">purchase.order.line</field>
                             <field name="inherit_id"
@@ -30,10 +30,10 @@
                             <field name="order_manufacturer_ids"
                                    widget="many2many_tags"
                                    domain="[('id', 'in', manufacturer_ids[0][2])]"
-                                   string="Available Manufacturers"/>
+                                   string="Selected Manufacturers"/>
                             <field name="manufacturer_ids"
                                    widget="many2many_tags"
-                                   string="Selected Manufacturers"/>
+                                   string="Available Manufacturers"/>
                         </field>
                             </field>
                         </record>
