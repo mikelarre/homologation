@@ -25,13 +25,15 @@ class ProductSupplierinfo(models.Model):
 class ManufacturerLine(models.Model):
     _name = "manufacturer.line"
 
-    name = fields.Char(string="Manufacturer")
+    name = fields.Char(string="Description")
     partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
     approved = fields.Boolean(string="Approved",
                               compute="_compute_approved_manufacturer")
     approval_start_date = fields.Date(string="Approval start date")
     approval_end_date = fields.Date(string="Approval end date")
     active = fields.Boolean(string="Active", default=True)
+    write_date = fields.Datetime(string="Last update date")
+    create_uid = fields.Many2one(comodel_name='res.users')
 
 
     @api.multi
